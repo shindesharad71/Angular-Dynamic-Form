@@ -9,3 +9,8 @@ form {
 .output-title {
   padding: 16px;
 }
+
+textarea {
+  height: 600px;
+  border: none;
+}

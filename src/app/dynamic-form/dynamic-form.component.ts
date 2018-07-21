@@ -8,7 +8,7 @@ import { FormControl, FormGroup, FormBuilder, FormArray, Validators } from '@ang
 })
 export class DynamicFormComponent implements OnInit {
   infoForm: FormGroup; // Main Form Name
-
+  output: any[];
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -23,13 +23,14 @@ export class DynamicFormComponent implements OnInit {
 
   addSkill() {
     const control = this.formBuilder.group({
-      'name': new FormControl(),
-      'rating': new FormControl()
+      'name': new FormControl('', [Validators.required]),
+      'rating': new FormControl('', [Validators.required])
     }); // Add Controls To Dynamic Form
     (<FormArray>this.infoForm.get('skills')).push(control); // Add it in array
   }
 
   onSubmit() {
+    this.output = this.infoForm.value;
     console.log(this.infoForm.value);
   }
 

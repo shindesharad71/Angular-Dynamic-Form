@@ -35,7 +35,8 @@
           </div>
         </div>
       </div>
-      <ng-container formArrayName="skills"> <!-- Dynamic Form Start-->
+      <ng-container formArrayName="skills">
+        <!-- Dynamic Form Start-->
         <div class="row" *ngFor="let item of infoForm.get('skills')['controls']; let i = index;" [formGroupName]="i">
           <div class="col-md-4">
             <div class="form-group">
@@ -48,11 +49,16 @@
             </div>
           </div>
         </div>
-      </ng-container> <!-- Dynamic Form End-->
-      <button type="submit" class="btn btn-lg btn-primary">Submit Form</button>
+      </ng-container>
+      <!-- Dynamic Form End-->
+      <button type="submit" class="btn btn-lg btn-primary" [disabled]="!infoForm.valid">Submit Form</button>
     </form>
   </div>
-  <div class="col-lg-3 border">
+  <div class="col-lg-3 border" *ngIf="output">
     <h5 class="output-title">Output</h5>
+    <!-- <p *ngIf="output">{{output | json}}</p> -->
+    <textarea highlight-js [lang]="'js'" [ngModel]="output | json" [disabled]="true"></textarea>
   </div>
 </div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/atom-one-dark.min.css">
