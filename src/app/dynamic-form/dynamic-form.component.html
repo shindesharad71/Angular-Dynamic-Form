@@ -1,30 +1,56 @@
 <div class="row">
   <div class="col-lg-9">
     <form>
+      <div class="container second-title">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Personal Information</h5>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col">
           <div class="form-group">
-            <label for="name">Name</label>
             <input type="text" class="form-control" placeholder="Name">
           </div>
         </div>
         <div class="col">
           <div class="form-group">
-            <label for="email">Email</label>
             <input type="email" class="form-control" placeholder="Email">
           </div>
         </div>
         <div class="col">
           <div class="form-group">
-            <label for="contact">Contact</label>
             <input type="number" class="form-control" placeholder="Contact">
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="container second-title">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Programming Skills</h5>
+          </div>
+          <div class="col-md-3 ml-auto">
+            <button type="button" class="btn btn-secondary">Add New</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Skill Name">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="number" class="form-control" max="10" min="1" maxlength="1" placeholder="Rating">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary">Submit Form</button>
     </form>
   </div>
-  <div class="col-lg-3">
+  <div class="col-lg-3 border">
     <p>Output</p>
   </div>
 </div>
