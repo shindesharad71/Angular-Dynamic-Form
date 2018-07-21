@@ -56,9 +56,6 @@
   </div>
   <div class="col-lg-3 border" *ngIf="output">
     <h5 class="output-title">Output</h5>
-    <!-- <p *ngIf="output">{{output | json}}</p> -->
-    <textarea highlight-js [lang]="'js'" [ngModel]="output | json" [disabled]="true"></textarea>
+    <p *ngIf="output">{{output | json}}</p>
   </div>
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/atom-one-dark.min.css">
