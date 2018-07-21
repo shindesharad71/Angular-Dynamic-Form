@@ -3,7 +3,8 @@
 An Example of Implementing Dynamic Form Fields in Angular With FormBuilder.
 
 ## Demo
-[!Demo](https://github.com/shindesharad71/Angular-Dynamic-Form/blob/master/demo.gif?raw=true)
+
+![Demo](https://github.com/shindesharad71/Angular-Dynamic-Form/blob/master/demo.gif?raw=true, "Demo")
 
 ## Development server
 
