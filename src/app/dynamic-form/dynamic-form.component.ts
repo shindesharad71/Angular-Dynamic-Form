@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dynamic-form.component.css']
 })
 export class DynamicFormComponent implements OnInit {
+  infoForm: FormGroup; // Main Form Name
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.infoForm = this.formBuilder.group({
+      'name': new FormControl('', [Validators.required]),
+      'email': new FormControl('', [Validators.required, Validators.email]),
+      'contact': new FormControl('', [Validators.required]),
+      'skills': this.formBuilder.array([]) // Array for Multiple form fields
+    });
+    this.addSkill(); // Initilize Dynamic Field
+  }
+
+  addSkill() {
+
+  }
+
+  onSubmit() {
+
   }
 
 }
