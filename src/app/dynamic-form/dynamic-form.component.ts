@@ -22,11 +22,15 @@ export class DynamicFormComponent implements OnInit {
   }
 
   addSkill() {
-
+    const control = this.formBuilder.group({
+      'name': new FormControl(),
+      'rating': new FormControl()
+    }); // Add Controls To Dynamic Form
+    (<FormArray>this.infoForm.get('skills')).push(control); // Add it in array
   }
 
   onSubmit() {
-
+    console.log(this.infoForm.value);
   }
 
 }
